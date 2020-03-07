@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="public/bootsatrp/css/bootstrap.min.css" rel="stylesheet" />
+    <script defer src="public/font/js/all.js"></script>
+    <!--load all styles -->
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function() {
+        $(".table").css("box-shadow", "-50px 20px 20px #808B96 ");
+        $(".form-control").css("box-shadow", "inset 0 0 10px #808B96 ");
+        $("tr").css("box-shadow", "inset 0 0 10px #808B96 ");
+        $(".btn").css("box-shadow", " inset 0 0 10px white");
+        $("h1").css({"text-shadow":"-10px 2px #80808026","font-size":"70px"});
+        $("body").css("background-color","antiquewhite")
+        
+        $("th")
+          .filter(".header")
+          .css("box-shadow", " inset 0 0 10px white");
+
+        $(".form-control").blur(function() {
+          var FValue = parseInt($(".btn1").val());
+
+          var SValue = parseInt($(".input1").val());
+
+          var result1 = FValue * SValue;
+          var result2=0;
+          var result3=0;
+          var total = result1 + result2 + result3;
+
+          $(".result1").html(result1);
+          $(".total").html(total);
+
+          var FiValue = parseInt($(".btn2").val());
+
+          var SeValue = parseInt($(".input2").val());
+
+          var result2 = FiValue * SeValue;
+
+          $(".result2").html(result2);
+          var FirValue = parseInt($(".btn3").val());
+
+          var SecValue = parseInt($(".input3").val());
+
+          var result3 = FirValue * SecValue;
+
+          $(".result3").html(result3);
+
+          var total = result1 + result2 + result3;
+          $(".total").html(total);
+
+        });
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+      });
+    </script>
+    <title>casher</title>
+  </head>
+  <body>
+    <h1 class="text-center mt-5">CASHER</h1>
+    <div class="container mt-5">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th class="header" scope="col">#</th>
+            <th class="header" scope="col">Product Name</th>
+            <th class="header" scope="col">Price</th>
+            <th class="header" scope="col">Qty</th>
+            <th class="header" scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <span><i class="fas fa-apple-alt"></i> Apple</span>
+            </td>
+            <td>
+              <button type="button" class="btn btn-dark btn1" value="250">
+                2.50
+              </button>
+            </td>
+            <td><input type="text" class="form-control input1" /></td>
+            <td><p class="result1"></p></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+              <span><i class="fas fa-carrot"></i> Carrot</span>
+            </td>
+            <td>
+              <button type="button" class="btn btn-dark btn2" value="110">
+                1.10
+              </button>
+            </td>
+            <td><input type="text" class="form-control input2" /></td>
+            <td><p class="result2"></p></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>
+              <span><i class="fas fa-lemon"></i> Lemon</span>
+            </td>
+            <td>
+              <button type="button" class="btn btn-dark btn3" value="280">
+                2.80
+              </button>
+            </td>
+            <td><input type="text" class="form-control input3" /></td>
+            <td><p class="result3"></p></td>
+          </tr>
+          <thead class="thead-dark border">
+            <tr class="">
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col">Total</th>
+              <th scope="col"><p class="total"></p></th>
+            </tr>
+          </thead>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

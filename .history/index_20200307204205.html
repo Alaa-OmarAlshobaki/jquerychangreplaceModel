@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="public/bootsatrp/css/bootstrap.min.css" rel="stylesheet" />
+    <script defer src="public/font/js/all.js"></script>
+    <!--load all styles -->
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function() {
+        $(".top1").css("opacity" ," 0");
+        $(".top2").css("opacity" ," 0");
+      $("#model1").hover(function(){
+        $(".top").css({"opacity" :" 0","filter":"blur(10px)"});
+   
+      });
+      $("#model2").hover(function(){
+        $(".bottom").css("opacity" ," 0");
+        $(".top1").show();
+        $(".top").css({"opacity" :" 0","filter":"blur(10px)"});
+      
+      });
+
+      });
+    </script>
+    <title>model</title>
+    <style type="text/css">
+    #cf {
+  position: relative;
+  height: 281px;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+#cf img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <button class="btn btn-outline-dark" id="model1"> model1</button>
+            <button class="btn btn-outline-dark" id="model2"> model2</button>
+            <button class="btn btn-outline-dark" id="model3"> model3</button>
+            <button class="btn btn-outline-dark " id="model4"> model4</button>
+          </div>
+        </div>
+        <div class="col-8">
+          <div id="cf">
+            <img class="bottom" src="public/img/1.jpg" />
+            <img class="top" src="public/img/2.jpg" />
+            <img class="top1" src="public/img/3.jpg" />
+            <img class="top2" src="public/img/4.jpg" />
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
